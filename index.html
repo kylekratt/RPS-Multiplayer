@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Rock Paper Scissors VERSUS</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <form id="charselect">
+        <select required>
+            <option disabled selected style="display:none"></option>
+            <option id="p1option" value="player1">Player 1</option>
+            <option id="p2option" value="player2">Player 2</option>
+        </select>
+        <input required type="text" maxlength="20">
+        <button id="submit">Submit</button>
+    </form>
+    <div class="player" id="player1">
+        <div class="name">Player 1: <span id="p1name"></span></div>
+        <div id="ryugif">
+            <img src="https://media.giphy.com/media/kdHa4JvihB2gM/source.gif">
+        </div>
+        <div class="results">
+            <div>Wins: <span></span></div>
+            <div>Ties: <span></span></div>
+            <div>Losses: <span></span></div>
+        </div>
+    </div>
+    <div id="arena">
+
+    </div>
+    <div class="player" id="player2">
+        <div class="name">Player 2: <span></span></div>
+        <div id="kengif">
+            <img src="https://media.giphy.com/media/FPsnQkFXlz0g8/source.gif">
+        </div>
+        <div class="results">
+            <div>Wins: <span></span></div>
+            <div>Ties: <span></span></div>
+            <div>Losses: <span></span></div>
+        </div>
+    </div>
+    <div id="chatbox">
+        <div id="history"></div>
+        <form>
+            <input id="textbox" type="text">
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+    <script src="assets/javascript/main.js"></script>
+</body>
+
+</html>
