@@ -1,6 +1,11 @@
+@font-face {
+    font-family: "Street Fighter";
+    src: url(../SSF4\ ABUKET.ttf) format("truetype");
+}
 body{
     position: relative;
-    height: 1000px;
+    min-height: 900px;
+    background-color: maroon;
 }
 #charselect{
     text-align: center;
@@ -11,6 +16,7 @@ body{
     top: 10%;
     width: 280px;
     height: 575px;
+    background-color: lightblue;
 }
 #player1{
     float: left;
@@ -26,6 +32,7 @@ body{
 .results{
     position: absolute;
     bottom: 0%;
+    padding: 1px;
 }
 #ryugif{
     margin: auto;
@@ -36,14 +43,62 @@ body{
     text-align: center;
     transform: scaleX(-1);
 }
-#arena{
+#stage{
     position: absolute;
     top: 10%;
     left: 50%;
-    margin-left: -375px;
-    width: 750px;
+    margin-left: -300px;
+    width: 600px;
     height: 575px;
-    border: 1px solid black;
+    background: maroon;
+}
+#arena{
+    position: absolute;
+    top: 50px;
+    width: 600px;
+    height: 525px;
+    background: url("../images/sf\ stage.jpg");
+    background-size: 600px 400px;
+    background-repeat: no-repeat;
+    visibility: visible;
+}
+#p1throw{
+    position: absolute;
+    left: 30px;
+    top: 100px;
+}
+#p2throw{
+    position: absolute;
+    right: 30px;
+    top: 100px;
+}
+#gameres{
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    text-align: center;
+    font-size: 80px;
+    line-height: 150%;
+    text-shadow:
+		-2px -2px 0 red,
+		2px -2px 0 red,
+		-2px 2px 0 red,
+		2px 2px 0 red;
+    font-family: "Street Fighter";
+    color: yellow;
+}
+#btnarray{
+    position: absolute;
+    bottom: 10px;
+    height: 90px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.hand{
+    padding: 0px;
+    border: none;
+    background: maroon;
 }
 #chatbox{
     position: absolute;
@@ -52,6 +107,7 @@ body{
     width: 80%;
     height: 200px;
     border: 1px solid black;
+    background-color: gold;
 }
 #textbox{
     position: absolute;
@@ -59,6 +115,7 @@ body{
     bottom: 0px;
     border-width: 2px 0px 0px 0px;
     border-color: black;
+    background-color: gold;
 }
 @media screen and (max-width: 1700px){
     #player1{
@@ -77,20 +134,14 @@ body{
     }
 }
 @media screen and (max-width: 1366px){
-    .player{
+    .player,#stage{
         top: 5%;
     }
     #player1{
-        left: 15%;
+        left: 1%;
     }
     #player2{
-        right: 15%;
-    }
-    #arena{
-        margin-top: 600px;
-    }
-    body{
-        padding-bottom: 600px;
+        right: 1%;
     }
 }
 @media screen and (max-width: 960px){

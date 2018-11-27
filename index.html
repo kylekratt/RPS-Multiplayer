@@ -8,12 +8,13 @@
 
 <body>
     <form id="charselect">
-        <select required>
+        <select id="pchoice" required>
             <option disabled selected style="display:none"></option>
-            <option id="p1option" value="player1">Player 1</option>
-            <option id="p2option" value="player2">Player 2</option>
+            <option id="p1choice" value="player1">Player 1</option>
+            <option id="p2choice" value="player2">Player 2</option>
+            <option value="spec">Spectator</option>
         </select>
-        <input required type="text" maxlength="20">
+        <input required id="pname" type="text" maxlength="10">
         <button id="submit">Submit</button>
     </form>
     <div class="player" id="player1">
@@ -27,11 +28,32 @@
             <div>Losses: <span></span></div>
         </div>
     </div>
-    <div id="arena">
-
+    <div id="stage">
+        <div id="arena">
+            <div id="p1throw">
+                <img>
+            </div>
+            <div id="gameres">
+                Player 1 Wins!
+            </div>
+            <div id="p2throw">
+                <img>
+            </div>
+            <div id="btnarray">
+                <button class="hand" id="rock">
+                    <img src="assets/images/rock.png" height=90px width=90px>
+                </button>
+                <button class="hand" id="paper">
+                    <img src="assets/images/paper.png" height=90px width=90px>
+                </button>
+                <button class="hand" id="scissors">
+                    <img src="assets/images/scissors.png" height=90px width=90px>
+                </button>
+            </div>
+        </div>
     </div>
     <div class="player" id="player2">
-        <div class="name">Player 2: <span></span></div>
+        <div class="name">Player 2: <span id="p2name"></span></div>
         <div id="kengif">
             <img src="https://media.giphy.com/media/FPsnQkFXlz0g8/source.gif">
         </div>
