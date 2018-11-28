@@ -55,15 +55,14 @@ database.ref().on("value", function (snapshot) {
     hold();
 })
 stringRef.on("value", function(snapshot){
-  console.log("this ran");
   if (player!=null){
-    console.log(snapshot.val().str);
     var newDiv = $("<div>");
     newDiv.css({"margin": "5px"}).text(snapshot.val().str);
     var newSpan = $("<span>");
     newSpan.css({"float": "right"}).text(snapshot.val().time);
     newDiv.append(newSpan);
     $("#history").append(newDiv);
+    $("#history").scrollTop($("#history").prop("scrollHeight"));
   }
 })
 connectedRef.on("value", function (snap) {
@@ -111,7 +110,7 @@ function hold() {
   $("#arena,.hand").css("visibility", "hidden")
 }
 function combat(){
-  $("#gamesres").css("opacity", "0");
+  $("#gameres").css("opacity", "0");
   if (p1ref.throwType=="rock"){
     $("#p1throwimg").attr("src", "assets/images/rock.png")
   }
