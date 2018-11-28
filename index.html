@@ -19,25 +19,25 @@
     </form>
     <div class="player" id="player1">
         <div class="name">Player 1: <span id="p1name"></span></div>
-        <div id="ryugif">
-            <img src="https://media.giphy.com/media/kdHa4JvihB2gM/source.gif">
+        <div id="ryubox">
+            <img id="ryugif" src="https://media.giphy.com/media/kdHa4JvihB2gM/source.gif">
         </div>
         <div class="results">
-            <div>Wins: <span></span></div>
-            <div>Ties: <span></span></div>
-            <div>Losses: <span></span></div>
+            <div>Wins: <span id="1wins">0</span></div>
+            <div>Ties: <span id="1ties">0</span></div>
+            <div>Losses: <span id="1losses">0</span></div>
         </div>
     </div>
     <div id="stage">
         <div id="arena">
             <div id="p1throw">
-                <img>
+                <img id="p1throwimg">
             </div>
             <div id="gameres">
-                Player 1 Wins!
+                
             </div>
             <div id="p2throw">
-                <img>
+                <img id="p2throwimg">
             </div>
             <div id="btnarray">
                 <button class="hand" id="rock">
@@ -54,23 +54,26 @@
     </div>
     <div class="player" id="player2">
         <div class="name">Player 2: <span id="p2name"></span></div>
-        <div id="kengif">
-            <img src="https://media.giphy.com/media/FPsnQkFXlz0g8/source.gif">
+        <div id="kenbox">
+            <img id="kengif" src="https://media.giphy.com/media/FPsnQkFXlz0g8/source.gif">
         </div>
         <div class="results">
-            <div>Wins: <span></span></div>
-            <div>Ties: <span></span></div>
-            <div>Losses: <span></span></div>
+            <div>Wins: <span id="2wins">0</span></div>
+            <div>Ties: <span id="2ties">0</span></div>
+            <div>Losses: <span id="2losses">0</span></div>
         </div>
     </div>
     <div id="chatbox">
         <div id="history"></div>
         <form>
-            <input id="textbox" type="text">
+            <input id="textbox" type="text" onkeypress="upload(this)">
         </form>
     </div>
+    <iframe width="0" height="0" src="https://www.youtube.com/embed/LQw-a8sApLQ?controls=0&autoplay=1&loop=1&playlist=LQw-a8sApLQ" allow="autoplay" frameborder="0"></iframe>
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
     <script src="assets/javascript/main.js"></script>
 </body>
