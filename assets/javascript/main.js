@@ -59,7 +59,7 @@ stringRef.on("value", function(snapshot){
   //If they are, the string is appended to the chat history, along with the time that the string was written
   if (player!=null){
     var newDiv = $("<div>");
-    newDiv.css({"margin": "5px"}).text(snapshot.val().str);
+    newDiv.css({"margin": "5px","line-height": "15px","overflow": "hidden"}).text(snapshot.val().str);
     var newSpan = $("<span>");
     newSpan.css({"float": "right"}).text(snapshot.val().time);
     newDiv.append(newSpan);
