@@ -5,7 +5,29 @@
     <title>Rock Paper Scissors VERSUS</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+<script>
+ var tag = document.createElement('script');
+ tag.src = "https://www.youtube.com/iframe_api";
+ var firstScriptTag = document.getElementsByTagName('script')[0];
+ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
+ var video;
+ window.onYouTubeIframeAPIReady = function() {
+    console.log("YouTube API Ready");
+    video = new YT.Player('player', { 
+        videoId: "LQw-a8sApLQ",
+        playerVars: {
+            controls: 0,
+            autoplay: 1,
+            disablekb: 1,
+            enablejsapi: 1,
+            iv_load_policy: 3,
+            showinfo: 0,
+            loop: 1
+        }
+    }); 
+    ytLoaded = true;
+ };
 <body>
     <form id="charselect">
         <select id="pchoice" required>
@@ -70,30 +92,7 @@
         </form>
     </div>
     <div id="player"></div>
-<script>
- var tag = document.createElement('script');
- tag.src = "https://www.youtube.com/iframe_api";
- var firstScriptTag = document.getElementsByTagName('script')[0];
- firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
- var video;
- window.onYouTubeIframeAPIReady = function() {
-    console.log("YouTube API Ready");
-    video = new YT.Player('player', { 
-        videoId: "LQw-a8sApLQ",
-        playerVars: {
-            controls: 0,
-            autoplay: 1,
-            disablekb: 1,
-            enablejsapi: 1,
-            iv_load_policy: 3,
-            showinfo: 0,
-            loop: 1
-        }
-    }); 
-    ytLoaded = true;
-    console.log(ytLoaded);
- };
 </script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
