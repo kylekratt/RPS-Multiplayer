@@ -5,33 +5,8 @@
     <title>Rock Paper Scissors VERSUS</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-    
-<body>
-    <script>
- var tag = document.createElement('script');
- tag.src = "https://www.youtube.com/iframe_api";
- var firstScriptTag = document.getElementsByTagName('script')[0];
- firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
- var video;
- window.onYouTubeIframeAPIReady = function() {
-    console.log("YouTube API Ready");
-    video = new YT.Player('player', { 
-        videoId: "LQw-a8sApLQ",
-        playerVars: {
-            controls: 0,
-            autoplay: 1,
-            disablekb: 1,
-            enablejsapi: 1,
-            iv_load_policy: 3,
-            showinfo: 0,
-            loop: 1
-        }
-    }); 
-    ytLoaded = true;
- };
-    
-</script>
+<body>
     <form id="charselect">
         <select id="pchoice" required>
             <option disabled selected style="display:none"></option>
@@ -94,8 +69,32 @@
             <input id="textbox" type="text" onkeypress="upload(this)">
         </form>
     </div>
+    <iframe width="0" height="0" src="https://www.youtube.com/embed/LQw-a8sApLQ?controls=0&autoplay=1&loop=1&playlist=LQw-a8sApLQ" allow="autoplay" frameborder="0"></iframe>
     <div id="player"></div>
+<script>
+ //var tag = document.createElement('script');
+ //tag.src = "https://www.youtube.com/iframe_api";
+ //var firstScriptTag = document.getElementsByTagName('script')[0];
+ //firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
+ //var video;
+ //window.onYouTubeIframeAPIReady = function() {
+    //console.log("YouTube API Ready");
+    //video = new YT.Player('player', { 
+        //videoId: "LQw-a8sApLQ",
+        //playerVars: {
+            //controls: 0,
+            //autoplay: 1,
+            //disablekb: 1,
+            //enablejsapi: 1,
+            //iv_load_policy: 3,
+            //showinfo: 0,
+            //loop: 1
+        //}
+    //}); 
+    //ytLoaded = true;
+ //};
+</script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
